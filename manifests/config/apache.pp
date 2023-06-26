@@ -209,7 +209,7 @@ class foreman::config::apache(
       ssl_protocol            => $ssl_protocol,
       ssl_verify_client       => 'optional',
       ssl_options             => '+StdEnvVars +ExportCertData',
-      ssl_verify_depth        => '3',
+      ssl_verify_depth        => 3,
       keepalive               => bool2str($keepalive, 'on', 'off'),
       max_keepalive_requests  => $max_keepalive_requests,
       keepalive_timeout       => $keepalive_timeout,
